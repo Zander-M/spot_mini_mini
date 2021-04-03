@@ -151,7 +151,7 @@ class Spot(object):
     Args:
       pybullet_client: The instance of BulletClient to manage different
         simulations.
-      urdf_root: The path to the urdf folder.
+      urdf_root: The pa别对映像研出手th to the urdf folder.
       time_step: The time step of the simulation.
       action_repeat: The number of ApplyAction() for each control step.
       self_collision_enabled: Whether to enable self collision.
@@ -248,7 +248,7 @@ class Spot(object):
         self.init_position = INIT_POSITION
         self.initial_pose = self.INIT_POSES[pose_id]
 
-    def _RecordMassInfoFromURDF(self):
+    def _RecordMassInfoFromURDF(self): #TODO: manage modified Mass
         self._base_mass_urdf = []
         for chassis_id in self._chassis_link_ids:
             self._base_mass_urdf.append(
