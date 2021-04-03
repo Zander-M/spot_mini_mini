@@ -1,3 +1,7 @@
+## Project Description
+
+This is a project for reinforcement learning on quadruped robots. For progress log, see separate file. The gym environment is modified based on the Spot Mini Mini Project. The original readme is attached below.
+
 ## Spot Mini Mini OpenAI Gym Environment
 
 [![GitHub release](https://img.shields.io/github/release/moribots/spot_mini_mini.svg)](https://github.com/moribots/spot_mini_mini/releases)
