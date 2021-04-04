@@ -42,6 +42,9 @@ parser.add_argument("-dr",
                     help="Do NOT Randomize State and Environment.",
                     action='store_true')
 parser.add_argument("-s", "--Seed", help="Seed (Default: 0).")
+parser.add_argument("-t", "--Test", 
+                    help="Test environment",
+                    action="store_true")
 ARGS = parser.parse_args()
 
 # Messages for Pipe
@@ -60,8 +63,16 @@ def main():
     if ARGS.Seed:
         seed = int(ARGS.Seed)
     print("SEED: {}".format(seed))
-    max_timesteps = 4e6
-    eval_freq = 1e1
+
+    if ARGS.Test:
+        print("Testing Environment")
+        max_timesteps = 100 
+        eval_freq = 10
+    else:
+        print("Training Environment")
+        max_timesteps = 4e6
+        eval_freq = 1e1
+
     save_model = True
     file_name = "spot_ars_"
 
